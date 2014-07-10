@@ -1,0 +1,428 @@
+html, body {	
+	margin:0;
+	padding:0;
+	font-family: arial;
+	font-size: 14px;
+	background: #e8e8e8;
+
+	/*height: 100%;*/
+	cursor: default;
+}
+.clear {
+	clear:both;
+}
+.mainnav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: none;
+}
+#container {
+	margin: 0;
+	padding: 0;
+	/*min-height: 100%;
+	max-height: 100%;*/
+	min-width: 300px;
+}
+#header {
+	/*border-top: 10px solid #ffa500;*/
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	/*height: 65px;*/
+
+	margin: 0;
+
+	background: #000;
+	color: #ffa500;
+}
+.statusbar {
+	display: inline-block;
+	height: 40px;
+	overflow:hidden;
+
+	font-size: small;
+	font-family: arial;
+	text-align: center;
+	
+	margin: 0px;
+	padding: 0 0.5em;
+	line-height: 40px;
+
+	vertical-align: middle;
+}
+.ctrl {
+	border: none;
+	outline: none;
+	width: 50px;
+	/*height: 40px;*/
+
+	margin: 0;
+	padding: 0;
+
+	color: #fff;
+	background: #000;
+
+	font-size: small;
+}
+.ctrl:hover {
+	/*color: #fff;*/
+	/*background: #ffa500;*/
+
+	border-bottom: 2px solid #ffa500;
+	text-shadow: 0 0 8px #fff;
+	/*box-shadow: inset 0 -1px 0px 1px rgba(255,255,255,0.5);*/
+}
+.ctrl:active {
+	color: #fff;
+	/*background: #ffa500;*/
+	border-bottom: 4px solid #ffa500;
+	box-shadow: inset 0 2px 2px 2px rgba(255,255,255,0.1);
+}
+#repeat {
+	color: #888;
+	font-size: 24px;
+	/*line-height: 40px;*/
+	/*vertical-align: center;*/
+}
+#repeat.active {
+	color: #fff;
+	text-shadow: 0 0 8px #ffa500;
+}
+#currenttime {
+	width: 90px;
+}
+.login {
+	float: right;
+	width: 60px;
+}
+#prog {
+	line-height: 0;
+	font-size: 0;
+	text-indent: 0;
+}
+progress {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+}
+.seek {
+
+	width: 100%;
+	height: 20px;
+
+	border-top: 5px solid #000;
+	/*border-bottom: 5px solid #000;*/
+
+	/*background: #593900;*/
+	/*color: #ffa500;*/
+	color: #00aaff;
+	background: #888;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	/*appearance: none;*/
+}
+.seek::-webkit-progress-bar 	 { background: #888; }
+.seek::-webkit-progress-value { background: #00aaff;	}
+.seek::-moz-progress-bar 	 { background: #00aaff; }
+
+.volume {
+	height: 20px;
+	vertical-align: middle;
+}
+input[type="range"]{
+	height: 20px;
+	-webkit-appearance:none; 
+	-moz-apperance:none; 
+
+	outline: none;
+	border: none;
+
+	background: #888;
+}
+input::-webkit-slider-thumb {
+	-webkit-appearance:none; 
+
+	width: 20px;
+	height: 20px;
+	background: #00aaff;
+	/*background: #000;*/
+}
+input::-moz-range-track {
+	-moz-apperance:none;
+	border: none;
+	outline: none;
+
+	background: #888;	
+}
+input::-moz-range-thumb {
+	-moz-apperance:none;
+
+	border: none;
+	outline: none;
+	border-radius: 0;
+
+	width: 20px;
+	height: 20px;
+	background: #00aaff;
+}
+
+
+#content {	
+	margin-top: 60px;
+	/*padding-top: 2px;*/
+}
+#searchbar {
+	height: 25px;
+	box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.2);
+
+	/*margin: 2px 20px 0 20px;	*/
+}
+#searchterm {	
+	width: calc(100% - 0.5em - 60px);
+	height: 25px;
+	padding: 0;
+	padding-left:0.5em;
+	
+	border: none;
+	outline: none;
+}
+#searchbutton {	
+	width: 60px;
+	height: 25px;
+	margin: 0px;
+	border:none;
+
+	float: right;
+}
+#listscontainer {
+	/*display: flex;*/
+
+}
+.list {
+	/*flex: 1 1 auto;*/
+
+	overflow: hidden;	
+	/*display: inline-block;*/
+	box-sizing: border-box;
+	width: 50%;
+	float: left;
+	/*width: calc(50% - 2px);*/
+	/*min-height: 100%;*/
+
+
+	list-style-type: decimal-leading-zero;
+	list-style-position: inside;
+
+
+	padding: 0px;
+	margin: 0px;
+	padding-top: 5px;
+	/*margin-bottom: 50px;*/
+
+	border: 1px solid rgba(0,0,0,0.1);
+	border-top: none;
+	/*box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.2);*/
+
+}
+.searchlist {
+	
+}
+.playlist {
+	/*background: #888;*/
+}
+.list li {
+	overflow: hidden;
+
+	/*width: 100%;	*/
+
+	padding: 0;
+	padding-left: 20px;
+	height: 28px;
+	line-height: 28px;	
+
+	/*display: inline-block;*/
+
+	text-decoration: none;
+	/*text-overflow: ellipsis;*/
+	/*text-transform: uppercase;*/
+	color: #222;
+
+	cursor: default;
+}
+.list li div {
+	display: inline-block;
+}
+.list span.listuser {
+	color: #888;
+	font-size: small;
+
+	/*height: 30px;*/
+	/*line-height: 32px;*/
+	margin: 0;
+	padding: 0;
+	padding-left: 10px;
+
+	cursor: default;
+}
+.list li:nth-child(odd){
+	/*background: #ddd;*/
+	background: rgba(0,0,0,0.025);
+}
+.list li:nth-child(even){
+	/*background: #ccc;*/
+	/*background: rgba(0,0,0,0.05);*/
+}
+.list li.active {
+	background: #aaa;
+	color: #fff;
+}
+.list li.selected {
+	background: #ffa500;
+}
+.searchlist div {
+	/*width: calc(100% - 79px);*/
+
+	/* 56 + 20 + 24*/
+}
+.playlist li.selected div {
+	/*width: calc(100% - 107px);*/
+}
+.list li.selected.out {
+	background: #999
+}
+.list li:hover {
+	background: #ffe4b2;
+}
+.listbutton {
+	float: right;
+	display: none;
+
+	color: #222;
+
+	font-size: small;
+	text-align: center;
+	text-decoration: none;
+
+	height: 28px;
+	line-height: 28px;
+	width: 28px;
+	/*padding: 0 0.5em;*/
+
+	cursor: default;
+}
+.selected .listbutton, .list li:hover .listbutton {
+	display: inline-block;
+}
+.listbutton:hover{
+	color: #fff;
+	/*background: #ffe4b2;*/
+}
+
+
+/*#navbar {
+	
+	height: 50px;
+	
+
+	position: fixed;
+	bottom: 0px; 
+	width: 100%;
+}
+
+#buttonbar {
+	
+	height: 50px;
+	
+
+	color: white;
+	
+	box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.2);
+
+	
+}
+
+#navbar .button {
+ 	background-color: #aaa;
+}
+#buttonbar .button {
+ 	background-color: #000;
+}
+
+.button {
+	float:left;
+
+	height:100%;
+	width:calc(100%/3);
+	margin:0;
+	padding:0;
+	
+	color:inherit;
+	background-color:inherit;
+	border:none;
+	
+	font-size:large;
+	text-transform:uppercase;	
+}
+.button:hover {
+	background-color: #ffa500 !important;
+	box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.2), inset -1px -1px 5px rgba(0, 0, 0, 0.2);
+}*/
+
+
+
+
+/*
+
+ 
+.button {
+	float:left;
+	height:100px;
+	width:25%;
+	margin:0px;
+	padding:0px;
+
+	
+
+	color:#FFF;
+
+	background:#F80;
+
+	border:none;
+
+	
+
+	font-size:large;
+
+	text-transform:uppercase;
+
+	
+
+	border: solid 2px black;
+
+	border-radius:4px;
+
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+
+    
+
+	box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.5), inset -2px -2px 0 rgba(200, 100, 0, 1);	
+
+}
+
+
+
+.button:hover, .button:focus {
+
+	background:black;
+
+	box-shadow:none;
+
+}*/
+
+
+
+
+
